@@ -88,8 +88,10 @@ recognition.onresult = (event) => {
 
 const activarMicrofono = () => {
   recognition.start();
+  console.log("mic activado");
   setTimeout(()=>{
   recognition.stop();
+  console.log("mic desactivado");
   },2000)
 };
 

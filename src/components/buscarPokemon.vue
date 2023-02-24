@@ -120,15 +120,17 @@ const cargarPokemonesMicrofono = async () => {
 };*/
 
 //guardo el pokemon en el localstorage
-/*if (localStorage.getItem("pokemon")) {
+if (localStorage.getItem("pokemon")) {
     // si existe lo parseo a array(en este caso ya que taras es un array)
     pokemones.value = JSON.parse(localStorage.getItem("pokemon"));
+    stats.value = JSON.parse(localStorage.getItem("stats_pokemon"));
   }
   
   watchEffect(() => {
     // para vigilar lo reactivo y usar el localstorage hay que usar watcheffect
     localStorage.setItem("pokemon", JSON.stringify(pokemones.value)); // primero lo creo y lo guardo como string
-  });*/
+    localStorage.setItem("stats_pokemon", JSON.stringify(stats.value));
+  });
 </script>
 
 <style>

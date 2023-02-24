@@ -82,7 +82,7 @@ recognition.lang = "es-ES";
 
 recognition.onresult = (event) => {
   buscarConMicrofono.value = event.results[0][0].transcript.toLowerCase();
-  console.log(buscarConMicrofono.value)
+  //console.log(buscarConMicrofono.value)
   cargarPokemonesMicrofono();
 };
 
@@ -90,10 +90,14 @@ const activarMicrofono = () => {
   recognition.start();
   console.log("mic activado");
   setTimeout(()=>{
-  recognition.stop();
+    desactivarMicrofono();
   console.log("mic desactivado");
   },2000)
 };
+
+const desactivarMicrofono = () => {
+  recognition.stop();
+}
 
 const cargarPokemonesMicrofono = async () => {
   try {

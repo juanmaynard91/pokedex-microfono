@@ -1,1 +1,1 @@
-linkardo : https://juanmaynard91.github.io/pokedex-microfono/
+link : https://juanmaynard91.github.io/pokedex-microfono/

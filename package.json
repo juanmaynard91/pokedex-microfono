@@ -1,0 +1,23 @@
+{
+  "name": "pokedex-mic",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.13.0",
+    "boxicons": "^2.1.4",
+    "sweetalert2": "^11.7.2",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.4",
+    "gh-pages": "^5.0.0",
+    "sass": "^1.58.3",
+    "vite": "^2.9.15"
+  }
+}

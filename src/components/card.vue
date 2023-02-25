@@ -1,7 +1,7 @@
 <template>
   <!-- Object.entries(pokemones).length > 0 : lo que hace es que solo muestra info cuando tiene algo que mostrar-->
   <div class="centrar" v-if="Object.entries(pokemones).length > 0" ref="target" :style="{ transform: cardTransform }">
-    <div class="card fw-bold border_black" style="max-width: 540px">
+    <div class="card fw-bold border_black ancho-card">
       <div class="row g-0">
         <div class="col-md-4 centrar-imagen">
           <img class="img-fluid rounded-start" :src="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />

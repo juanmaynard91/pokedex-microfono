@@ -20,14 +20,17 @@ const props = defineProps({
   border: 1px solid black;
   width: 50%;
 }
+
 .progress-bar {
   display: flex;
   align-items: end;
   padding: 0 2px 0 0;
 }
+
 .acomodar-progress {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 </style>

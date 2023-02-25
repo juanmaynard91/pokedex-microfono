@@ -7,7 +7,7 @@
           <img class="img-fluid rounded-start" :src="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
         </div>
         <div class="col-md-8">
-          <div class="card-body d-grid gap-1 ps-4">
+          <div class="card-body d-grid gap-1 padding-card">
             <p>#{{ pokemones.id }}</p>
 
             <p>{{ pokemones.name }}</p>

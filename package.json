@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
+    "annyang": "^2.6.1",
     "boxicons": "^2.1.4",
     "sweetalert2": "^11.7.2",
     "vue": "^3.2.25"

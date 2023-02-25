@@ -19,23 +19,6 @@ const buscarPokemon = defineAsyncComponent(() =>
 );
 </script>
 
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-}
-
-#app {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  /*border: 10px solid red;*/
-  height: 100vh;
-}
+<style scoped>
+@import "./assets/style.css";
 </style>

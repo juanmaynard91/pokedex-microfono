@@ -15,7 +15,7 @@ const props = defineProps({
 });
 </script>
 
-<style>
+<style scoped>
 .progress {
   border: 1px solid black;
   width: 50%;
@@ -32,5 +32,4 @@ const props = defineProps({
   justify-content: space-between;
   align-items: center;
 }
-
 </style>

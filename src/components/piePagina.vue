@@ -15,30 +15,5 @@
   </script>
   
   <style scoped>
-  .navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer {
-    width: 100%;
-    height: 3rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-  }
-  
-  .footer__icon {
-    padding: 0 20px;
-    text-decoration: none;
-    color: #fff;
-  }
-  .footer__icon:hover {
-    color: #d7dde8;
-  }
-  
-  a:hover {
-    transform: scale(1.3);
-  }
+  @import url("../assets/style.css");
   </style>

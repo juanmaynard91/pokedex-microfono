@@ -75,22 +75,22 @@ main {
 
 @media screen and (min-width: 200px) {
   img {
-    height: 4rem;
-    transform: scale(1.5);
+    height: 5rem;
+    transform: scale(2);
   }
 }
 /* medidas para celular */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   img {
     height: 7rem;
-    transform: scale(1);
+    transform: scale(2);
   }
 }
 /* medidas para tablet */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   img {
     height: 10rem;
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 /* medidas para laptop */

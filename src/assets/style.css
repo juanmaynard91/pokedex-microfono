@@ -54,10 +54,11 @@
 }
 
 img {
-  height: 19rem;
+  height: 14rem;
   image-rendering: pixelated;
   object-fit: contain;
-  transform: scale(1.2);
+  transform: scale(1.5);
+  padding-left: 1rem;
 }
 
 main {
@@ -68,22 +69,26 @@ main {
     grid-template-rows: auto 1fr auto;*/
 }
 
+.ps-4 {
+  padding-left: 2rem;
+}
+
 /* medidas para celular */
-@media screen and (min-width: 282px) and (max-width: 767px) {
+@media screen and (min-width: 258px) and (max-width: 767px) {
   img {
     height: 7rem;
     transform: scale(1.6);
-    padding-top: 1rem;
+    padding: 1rem 0 0 0;
   }
-  .centrar-habilidades {
-    display: block !important;
+  .ps-4 {
+    padding-left: 1rem;
   }
 }
 
 .centrar {
   display: grid;
   place-items: center;
-  margin: 1rem auto 4rem auto;
+  margin: 0 auto 4rem auto;
 }
 
 .nombre_pokemon {

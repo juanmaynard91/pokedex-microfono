@@ -1,30 +1,30 @@
 <template>
   <!-- Object.entries(pokemones).length > 0 : lo que hace es que solo muestra info cuando tiene algo que mostrar-->
   <div class="centrar" v-if="Object.entries(pokemones).length > 0" ref="target" :style="{ transform: cardTransform }">
-    <div class="card mb-3 fw-bold border_black" style="max-width: 540px">
+    <div class="card fw-bold border_black" style="max-width: 540px">
       <div class="row g-0">
-        <div class="col-md-6 centrar-imagen">
+        <div class="col-md-4 centrar-imagen">
           <img class="img-fluid rounded-start" :src="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
         </div>
-        <div class="col-md-6">
-          <div class="card-body d-grid gap-1">
+        <div class="col-md-8">
+          <div class="card-body d-grid gap-1 ps-4">
             <p>#{{ pokemones.id }}</p>
 
-            <p class="nombre_pokemon">{{ pokemones.name }}</p>
+            <p>{{ pokemones.name }}</p>
 
-            <div class="d-flex justify-content-center align-items-center color-letra">
+            <div class="d-flex justify-content-center align-items-center color-letra altura-type">
               <div class="badge" v-for="(type, index) in pokemones.types" :key="index">
                 <!-- :class si el nombre en css coinside con type.name muestro el color -->
                 <span :class="type.type.name"> {{ type.type.name }}</span>
               </div>
             </div>
 
-            <div class="color-letra centrar-habilidades">
+            <!--<div class="color-letra centrar-habilidades">
               abilities 
               <div v-for="(ability, index) in pokemones.abilities" :key="index">
                 <span>{{ ability.ability.name }}</span>
               </div>
-            </div>
+            </div>-->
 
             <barras :stats="stats" />
           </div>
@@ -88,5 +88,8 @@ const props = defineProps({
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.altura-type {
+  height: 2rem;
 }
 </style>

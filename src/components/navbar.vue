@@ -14,4 +14,5 @@ import cambiarTema from "./cambiarColor.vue";
 </script>
 
 <style>
+@import "../assets/estilosSass.css";
 </style>

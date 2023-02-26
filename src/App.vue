@@ -20,5 +20,5 @@ const buscarPokemon = defineAsyncComponent(() =>
 </script>
 
 <style scoped>
-@import "./assets/style.css";
+@import "./assets/estilosSass.css";
 </style>

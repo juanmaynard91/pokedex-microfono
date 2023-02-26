@@ -79,7 +79,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-@import "../assets/style.css";
+@import "../assets/estilosSass.css";
 .centrar-imagen {
   display: flex;
   justify-content: center;

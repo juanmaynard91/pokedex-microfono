@@ -14,8 +14,7 @@
 <script setup></script>
 
 <style scoped>
-@import url("../assets/style.css");
-
+@import "../assets/estilosSass.css";
 .container {
   position: fixed;
   top: 0;

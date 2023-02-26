@@ -84,7 +84,7 @@ watchEffect(() => {
 </script>
 
 <style>
-/* importo los colores de los tipos desde style.css */
-@import "../assets/style.css";
+/* importo los colores de los tipos desde estilosSass.css */
+@import "../assets/estilosSass.css";
 
 </style>

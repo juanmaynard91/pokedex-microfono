@@ -1,11 +1,12 @@
 <template>
-  <header>
-    <navbar />
-  </header>
+  <div class="acomodar-app">
+   <header>
+     <navbar />
+   </header>
 
   <main class="container">
     <form @submit.prevent="buscarPokemon">
-      <div class="input-group mt-3 mb-3">
+      <div class="input-group mt-3 mb-5">
         <input type="text" class="form-control input border_black" placeholder="ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
       </div>
     </form>
@@ -15,9 +16,10 @@
     </transition>
   </main>
 
-  <footer>
-    <piePagina />
-  </footer>
+   <footer>
+     <piePagina />
+   </footer>
+  </div>
 </template>
 
 <script setup>

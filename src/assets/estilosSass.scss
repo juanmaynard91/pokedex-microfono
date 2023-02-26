@@ -19,6 +19,7 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
   outline: none;
   box-sizing: border-box;
 }
+
 #app {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
@@ -81,10 +82,17 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
   background-color: #f0b5bb;
 }
 
-main {
-  position: relative;
+.acomodar-app {
   display: flex;
   flex-direction: column;
+}
+
+main {
+  max-width: 100%; /* el % es relativo se adapta al tamaño de la pantalla, y max-width tambien sirve para que se adapte al tamoño de pantalla */
+  height: 100%; /* para ocupar todo el alto automaticamente y no este adivinando con rem para cada tamaño de pantalla*/
+  margin: 0 auto;
+  padding-top: 1%;
+  box-sizing: border-box; /* fijo el tamaño de caja del contenedor no importa las medidas que le agregue a los demas elementos */
 }
 
 /* card */
@@ -100,32 +108,22 @@ img {
   padding: 1rem;
 }
 
-/* medidas para celular pequeños */
-@media screen and (min-width: 200px) {
+// medidas para celular pequeños
+@media screen and (max-width: 480px) {
   img {
     height: 5rem;
-    transform: scale(2);
-  }
-}
-/* medidas para celular normales */
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  img {
-    height: 7rem;
     transform: $tamaño-imagen;
   }
 }
-/* medidas para tablet */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+// medidas para celular normales
+@media screen and (min-width: 480px) and (max-width: 767px) {
   img {
-    height: 10rem;
+    height: 6rem;
     transform: $tamaño-imagen;
   }
-  .centrar {
-    margin: $acomodando-card-rotacion-pantalla;
-  }
 }
-/* medidas para laptop */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+// medidas para tablet
+@media screen and (min-width: 768px) and (max-width: 991px) {
   img {
     height: 18rem;
     transform: $tamaño-imagen;
@@ -134,24 +132,21 @@ img {
     margin: $acomodando-card-rotacion-pantalla;
   }
 }
-/* medidas para monitor pc */
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+// medidas para laptop
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   img {
     height: 18rem;
     transform: $tamaño-imagen;
   }
   .centrar {
-    margin: $acomodando-card-pantalla-vertical;
+    margin: $acomodando-card-rotacion-pantalla;
   }
 }
-/* medidas para tv */
-@media screen and (min-width: 1201px) {
+// medidas para monitor pc
+@media screen and (min-width: 1200px) {
   img {
     height: 18rem;
     transform: $tamaño-imagen;
-  }
-  .centrar {
-    margin: $acomodando-card-pantalla-vertical;
   }
 }
 

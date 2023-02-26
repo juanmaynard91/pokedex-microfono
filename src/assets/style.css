@@ -9,13 +9,13 @@
   outline: none;
   box-sizing: border-box;
 }
-
 #app {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   height: 100vh;
 }
 
+/* colores type pokemon*/
 .normal {
   background-color: #a8a878;
 }
@@ -110,6 +110,9 @@ main {
     height: 10rem;
     transform: scale(1.5);
   }
+  .centrar {
+    margin: 1rem auto 9rem auto !important;
+  }
 }
 /* medidas para laptop */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -118,7 +121,7 @@ main {
     transform: scale(1.5);
   }
   .centrar {
-    margin: 1rem auto 3rem auto !important;
+    margin: 1rem auto 9rem auto !important;
   }
 }
 /* medidas para monitor pc */
@@ -142,11 +145,17 @@ main {
   }
 }
 
+/* centrar el card y otras cosas */
 .centrar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3rem auto;
+  margin: 1rem auto 0 auto;
+}
+
+.card {
+  border-radius: 20px;
+  filter: drop-shadow(0 0 15px #121212);
 }
 
 p {
@@ -182,16 +191,10 @@ form {
 .list-leave-active {
   transition: all 0.5s ease;
 }
-
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
   transform: translateX(-50px);
-}
-
-.card {
-  border-radius: 20px;
-  filter: drop-shadow(0 0 15px #121212);
 }
 
 .input {
@@ -205,16 +208,13 @@ form {
   box-shadow: 0px 0px 20px -18px;
   z-index: 1;
 }
-
 .input:hover {
   border: 2px solid lightgrey;
   box-shadow: 0px 0px 20px -17px;
 }
-
 .input:active {
   transform: scale(0.95);
 }
-
 .input:focus {
   border: 2px solid grey;
 }
@@ -236,17 +236,14 @@ form {
   position: fixed;
   bottom: 0;
 }
-
 .footer__icon {
   padding: 0 20px;
   text-decoration: none;
   color: #fff;
 }
-
 .footer__icon:hover {
   color: #d7dde8;
 }
-
 a:hover {
   transform: scale(1.5);
 }
@@ -257,7 +254,6 @@ a:hover {
   position: relative;
   z-index: 1;
 }
-
 .circle {
   width: 20px;
   height: 20px;
@@ -268,7 +264,6 @@ a:hover {
   transform-origin: 50%;
   animation: circle7124 0.5s alternate infinite ease;
 }
-
 @keyframes circle7124 {
   0% {
     top: 60px;
@@ -285,18 +280,15 @@ a:hover {
     top: 0%;
   }
 }
-
 .circle:nth-child(2) {
   left: 45%;
   animation-delay: 0.2s;
 }
-
 .circle:nth-child(3) {
   left: auto;
   right: 15%;
   animation-delay: 0.3s;
 }
-
 .shadow {
   width: 20px;
   height: 4px;
@@ -310,7 +302,6 @@ a:hover {
   filter: blur(1px);
   animation: shadow046 0.5s alternate infinite ease;
 }
-
 @keyframes shadow046 {
   0% {
     transform: scaleX(1.5);
@@ -324,12 +315,10 @@ a:hover {
     opacity: 0.4;
   }
 }
-
 .shadow:nth-child(4) {
   left: 45%;
   animation-delay: 0.2s;
 }
-
 .shadow:nth-child(5) {
   left: auto;
   right: 15%;

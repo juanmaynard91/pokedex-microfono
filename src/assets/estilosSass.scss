@@ -24,6 +24,9 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   height: 100vh;
+  background-image: url(./background-pokedex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* sirve para que la imagen cubra todo el contenedor (se adapte a la resolucion y no se ve distorcionado )*/
 }
 
 /* colores type pokemon*/
@@ -309,8 +312,8 @@ form {
 
 /* footer */
 footer {
-  background-color: #252525;
-  color: #fff;
+  //background-color: #252525;
+  //color: #fff;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -336,12 +339,12 @@ footer {
   .iconos-footer {
     padding: 0 20px;
     text-decoration: none;
-    color: #fff;
+    //color: #fff;
   }
 
-  .iconos-footer:hover {
+  /*.iconos-footer:hover {
     color: #d7dde8;
-  }
+  }*/
 
   .bi:hover {
     transform: $tamaño-imagen;

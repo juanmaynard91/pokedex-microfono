@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark">
     <div class="container-fluid">
       <h1 class="navbar-brand">
-        Pokedex
+        <img class="altura-logo" src="../assets/pokedex-logo.png" alt="logo de pokedex" loading="lazy" />
       </h1>
       <cambiarTema />
     </div>
@@ -15,4 +15,11 @@ import cambiarTema from "./cambiarColor.vue";
 
 <style>
 @import "../assets/estilosSass.css";
+
+.navbar-brand {
+  margin: 0;
+}
+.altura-logo {
+  height: 2rem;
+}
 </style>

@@ -15,6 +15,9 @@
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   height: 100vh;
+  background-image: url(./background-pokedex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* sirve para que la imagen cubra todo el contenedor (se adapte a la resolucion y no se ve distorcionado )*/
 }
 
 /* colores type pokemon*/
@@ -328,11 +331,12 @@ form {
 
 /* footer */
 footer {
-  background-color: #252525;
-  color: #fff;
   position: fixed;
   bottom: 0;
   width: 100%;
+  /*.iconos-footer:hover {
+    color: #d7dde8;
+  }*/
 }
 footer .footer-container {
   display: flex;
@@ -352,10 +356,6 @@ footer h3 {
 footer .iconos-footer {
   padding: 0 20px;
   text-decoration: none;
-  color: #fff;
-}
-footer .iconos-footer:hover {
-  color: #d7dde8;
 }
 footer .bi:hover {
   transform: scale(1.5);

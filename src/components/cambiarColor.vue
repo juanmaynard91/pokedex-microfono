@@ -29,11 +29,19 @@
   body {
     /*background: #0575e6;*/
     background-size: 200% 200%;
-    background-image: linear-gradient(to right, #00c6ff, #0072ff);
-    animation: bg-animado 5s linear infinite alternate;
-  
+    /*background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    animation: bg-animado 5s linear infinite alternate;*/
     .card {
       background: #e0e0e0;
+    }
+    nav {
+      background-color: #e0e0e0;
+    }
+    footer {
+      background-color: #e0e0e0;
+      a {
+        color: #000;
+      }
     }
   }
   
@@ -43,23 +51,33 @@
   
   .dark {
     /*background-color: #03001e !important;*/
-    background-image: linear-gradient(to right, #1e3c72, #2a5298) !important;
+    //background-image: linear-gradient(to right, #1e3c72, #2a5298) !important;
     .card {
-      background: #757f9a;
+      //background: #757f9a;
+      background: #202020;
       p, span, .color-letra {
         color: $color-letra-card;
       }
     }
+    nav {
+      background-color: #202020;
+    }
+    footer {
+      background-color: #202020;
+      h3, p , a {
+        color : $color-letra-card;
+      }
+    }
   }
   
-  @keyframes bg-animado {
+  /*@keyframes bg-animado {
     from {
       background-position: 0, 0;
     }
     to {
       background-position: 100% 100%;
     }
-  }
+  }*/
   
   button {
     --button_radius: 0.75em;

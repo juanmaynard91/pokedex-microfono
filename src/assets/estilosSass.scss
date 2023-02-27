@@ -1,5 +1,5 @@
 $tamaño-imagen: scale(1.5);
-$acomodando-card-rotacion-pantalla: 1rem auto 9rem auto !important;
+$acomodando-card-rotacion-pantalla: 1rem auto 6rem auto !important;
 $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 
 @mixin centrarTodo {
@@ -319,7 +319,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /*align-items: flex-start;*/
+    align-items: flex-start;
     padding: 0.5rem;
   }
 
@@ -330,7 +330,7 @@ footer {
   h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    /*margin-bottom: 0.5rem;*/
   }
 
   .iconos-footer {
@@ -352,12 +352,19 @@ footer {
   }
 }
 
-@media screen and (min-width: 200px) and (max-width: 767px) {
+@media screen and (max-width: 412px) {
   .footer-container {
-    flex-direction: column;
-    align-items: center;
+    @include centrarTodo();
+    //flex-direction: column;
+    //align-items: center;
   }
-  .social-media {
-    margin-bottom: 1rem;
+  footer .social-media {
+    display: flex;
+    margin: 0;
+    align-items: flex-end;
+
+    .iconos-footer {
+      padding: 0px 5px 0px 5px;
+    }
   }
 }

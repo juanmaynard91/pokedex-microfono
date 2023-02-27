@@ -136,7 +136,7 @@ img {
     transform: scale(1.5);
   }
   .centrar {
-    margin: 1rem auto 9rem auto !important;
+    margin: 1rem auto 6rem auto !important;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -145,7 +145,7 @@ img {
     transform: scale(1.5);
   }
   .centrar {
-    margin: 1rem auto 9rem auto !important;
+    margin: 1rem auto 6rem auto !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -338,7 +338,7 @@ footer .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /*align-items: flex-start;*/
+  align-items: flex-start;
   padding: 0.5rem;
 }
 footer .social-media {
@@ -347,7 +347,7 @@ footer .social-media {
 footer h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  /*margin-bottom: 0.5rem;*/
 }
 footer .iconos-footer {
   padding: 0 20px;
@@ -364,12 +364,18 @@ footer .contact-info {
   display: grid;
 }
 
-@media screen and (min-width: 200px) and (max-width: 767px) {
+@media screen and (max-width: 412px) {
   .footer-container {
-    flex-direction: column;
+    display: flex;
     align-items: center;
+    justify-content: center;
   }
-  .social-media {
-    margin-bottom: 1rem;
+  footer .social-media {
+    display: flex;
+    margin: 0;
+    align-items: flex-end;
+  }
+  footer .social-media .iconos-footer {
+    padding: 0px 5px 0px 5px;
   }
 }/*# sourceMappingURL=estilosSass.css.map */

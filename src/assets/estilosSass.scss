@@ -355,8 +355,6 @@ footer {
 @media screen and (max-width: 412px) {
   .footer-container {
     @include centrarTodo();
-    //flex-direction: column;
-    //align-items: center;
   }
   footer .social-media {
     display: flex;
@@ -365,6 +363,16 @@ footer {
 
     .iconos-footer {
       padding: 0px 5px 0px 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 412px) {
+  footer .social-media {
+    height: 4rem;
+
+    .iconos-footer {
+      transform: $tamaño-imagen;
     }
   }
 }

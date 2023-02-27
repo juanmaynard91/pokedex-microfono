@@ -378,4 +378,12 @@ footer .contact-info {
   footer .social-media .iconos-footer {
     padding: 0px 5px 0px 5px;
   }
+}
+@media screen and (min-width: 412px) {
+  footer .social-media {
+    height: 4rem;
+  }
+  footer .social-media .iconos-footer {
+    transform: scale(1.5);
+  }
 }/*# sourceMappingURL=estilosSass.css.map */

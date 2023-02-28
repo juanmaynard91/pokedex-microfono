@@ -28,7 +28,7 @@
   
   body {
     /*background: #0575e6;*/
-    background-size: 200% 200%;
+    /*background-size: 200% 200%;*/
     /*background-image: linear-gradient(to right, #00c6ff, #0072ff);
     animation: bg-animado 5s linear infinite alternate;*/
     .card {

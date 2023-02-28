@@ -43,6 +43,10 @@
         color: #000;
       }
     }
+    .form-control {
+      background: #e0e0e0;
+      color : #000;
+    }
   }
   
   body[theme="dark"] {
@@ -67,6 +71,10 @@
       h3, p , a {
         color : $color-letra-card;
       }
+    }
+    .form-control {
+      background: #202020;
+      color : $color-letra-card;
     }
   }
   

@@ -142,7 +142,7 @@ img {
     margin: 1rem auto 6rem auto !important;
   }
   #app {
-    height: 120vh;
+    height: 150vh;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {

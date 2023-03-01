@@ -44,7 +44,7 @@ const cargarPokemonesInput = async () => {
     const res = await fetch(`${pokeApi}/${buscarConInput.value}`);
     const data = await res.json();
     pokemones.value = data;
-    //console.log(data)
+    console.log(data)
 
     stats.value = data.stats.map((stat) => ({
       name: stat.stat.name,

@@ -42,9 +42,12 @@
       a {
         color: #000;
       }
+      a:hover {
+        color: #000;
+      }
     }
     .form-control {
-      background: #e0e0e0;
+      background: #fff;
       color : #000;
     }
   }
@@ -70,6 +73,9 @@
       background-color: #202020;
       h3, p , a {
         color : $color-letra-card;
+      }
+      a:hover {
+        color: $color-letra-card;
       }
     }
     .form-control {

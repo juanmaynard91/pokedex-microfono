@@ -34,15 +34,15 @@ import cambiarTema from "./cambiarColor.vue";
 .nav-item {
   display: flex;
   justify-content: flex-end;
-  padding-top: 1rem;
+  padding-top: 0.6rem;
 }
 .nav-link {
   padding: 0;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
+    display: flex;
     justify-content: end;
   }
 }

@@ -1,28 +1,30 @@
 <template>
   <div class="acomodar-app">
-   <header>
-     <navbar />
-   </header>
+    <header>
+      <navbar />
+    </header>
 
-  <main class="container">
-    <form @submit.prevent="buscarPokemon">
-      <div class="input-group mt-3 mb-3">
-        <input type="text" class="form-control input border_black" placeholder="ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
+    <main class="container">
+      <div class="centrar-buscadores">
+        <form @submit.prevent="buscarPokemon">
+          <div class="input-group mt-3 mb-3">
+            <input type="text" class="form-control input border_black" placeholder="ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
+          </div>
+        </form>
+
+        <button class="btn btn-primary btn-mic" @click="activandoMicrofono">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" /><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" /></svg>
+        </button>
       </div>
 
-      <div>
-        <button class="btn btn-primary" @click="startListening">Microfono</button>
-      </div>
-    </form>
+      <transition name="list">
+        <card :pokemones="pokemones" :stats="stats" />
+      </transition>
+    </main>
 
-    <transition name="list">
-      <card :pokemones="pokemones" :stats="stats" />
-    </transition>
-  </main>
-
-   <footer>
-     <piePagina />
-   </footer>
+    <footer>
+      <piePagina />
+    </footer>
   </div>
 </template>
 
@@ -44,11 +46,9 @@ await new Promise((res) => setTimeout(res, 1000));
 
 const cargarPokemonesInput = async () => {
   try {
-    //muestra la imagen hasta el 897
     const res = await fetch(`${pokeApi}/${buscarConInput.value}`);
     const data = await res.json();
     pokemones.value = data;
-    console.log(data)
 
     stats.value = data.stats.map((stat) => ({
       name: stat.stat.name,
@@ -75,38 +75,35 @@ const buscarPokemon = () => {
   }
 };
 
-const spokenText = ref("");
+const microfono = ref("");
 
-const startListening = async () => {
+const activandoMicrofono = async () => {
   try {
     const recognition = new window.webkitSpeechRecognition();
-    recognition.lang = "en-US";
+    recognition.lang = "es-ES";
     recognition.start();
     recognition.onresult = (event) => {
-      spokenText.value = event.results[0][0].transcript;
-      console.log(spokenText.value);
+      microfono.value = event.results[0][0].transcript;
       cargarPokemonesMicrofono();
     };
-  } catch (error) {
-    console.error(error);
+  } catch (e) {
+    console.error(e);
   }
 };
 
 const cargarPokemonesMicrofono = async () => {
-  spokenText.value = spokenText.value.toLocaleLowerCase();
+  microfono.value = microfono.value.toLocaleLowerCase();
   try {
-    const res = await fetch(`${pokeApi}/${spokenText.value}`);
+    const res = await fetch(`${pokeApi}/${microfono.value}`);
     const data = await res.json();
     pokemones.value = data;
-    console.log(data)
 
     stats.value = data.stats.map((stat) => ({
       name: stat.stat.name,
       value: stat.base_stat,
     }));
   } catch (e) {
-    console.log("habla bien pa")
-    console.log(e);
+    console.log("habla bien pa", e);
   }
 };
 
@@ -127,5 +124,4 @@ watchEffect(() => {
 <style>
 /* importo los colores de los tipos desde estilosSass.css */
 @import "../assets/estilosSass.css";
-
 </style>

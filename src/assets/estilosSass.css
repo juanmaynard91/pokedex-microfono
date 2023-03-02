@@ -249,6 +249,26 @@ form {
   border: 1px solid black;
 }
 
+/* input + boton del mic */
+.centrar-buscadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group {
+  padding-right: 1rem;
+}
+
+.btn-mic {
+  height: 3rem;
+  width: 3rem;
+}
+
+.btn-mic:hover {
+  transform: scale(1.1);
+}
+
 /* footer */
 footer {
   position: fixed;

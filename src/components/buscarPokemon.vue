@@ -9,6 +9,10 @@
       <div class="input-group mt-3 mb-3">
         <input type="text" class="form-control input border_black" placeholder="ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
       </div>
+
+      <div>
+        <button class="btn btn-primary" @click="startListening">Microfono</button>
+      </div>
     </form>
 
     <transition name="list">
@@ -68,6 +72,41 @@ const buscarPokemon = () => {
     buscarConInput.value = "";
   } else {
     pokemones.value = [];
+  }
+};
+
+const spokenText = ref("");
+
+const startListening = async () => {
+  try {
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.start();
+    recognition.onresult = (event) => {
+      spokenText.value = event.results[0][0].transcript;
+      console.log(spokenText.value);
+      cargarPokemonesMicrofono();
+    };
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const cargarPokemonesMicrofono = async () => {
+  spokenText.value = spokenText.value.toLocaleLowerCase();
+  try {
+    const res = await fetch(`${pokeApi}/${spokenText.value}`);
+    const data = await res.json();
+    pokemones.value = data;
+    console.log(data)
+
+    stats.value = data.stats.map((stat) => ({
+      name: stat.stat.name,
+      value: stat.base_stat,
+    }));
+  } catch (e) {
+    console.log("habla bien pa")
+    console.log(e);
   }
 };
 

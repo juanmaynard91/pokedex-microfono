@@ -24,7 +24,7 @@
   
   <style lang="scss">
   /* npm sass porque al final tuve que agregar color con scss el npm con Tailwind no funciona*/  
-  $color-letra-card: #fff;
+  $color-letra-blanco: #fff;
   
   body {
     /*background: #0575e6;*/
@@ -63,24 +63,27 @@
       //background: #757f9a;
       background: #202020;
       p, span, .color-letra {
-        color: $color-letra-card;
+        color: $color-letra-blanco;
       }
     }
     nav {
       background-color: #202020;
     }
+    .burger span {
+      background : $color-letra-blanco;
+    }
     footer {
       background-color: #202020;
       h3, p , a {
-        color : $color-letra-card;
+        color : $color-letra-blanco;
       }
       a:hover {
-        color: $color-letra-card;
+        color: $color-letra-blanco;
       }
     }
     .form-control {
       background: #202020;
-      color : $color-letra-card;
+      color : $color-letra-blanco;
     }
   }
   

@@ -78,12 +78,17 @@ const props = defineProps({
  });*/
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 @import "../assets/estilosSass.css";
-.centrar-imagen {
+
+@mixin centrarTodo {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.centrar-imagen {
+  @include centrarTodo;
 }
 .centrar-habilidades {
   display: flex;

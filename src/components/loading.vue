@@ -25,8 +25,15 @@
 
 <script setup></script>
 
-<style scoped>
+<style scoped lang="scss">
 @import "../assets/estilosSass.css";
+
+@mixin centrarTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   position: fixed;
   top: 0;
@@ -36,9 +43,7 @@
 }
 
 .centrar-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centrarTodo;
 
   position: absolute;
   top: 50%;

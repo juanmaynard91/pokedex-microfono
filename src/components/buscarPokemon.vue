@@ -12,7 +12,7 @@
           </div>
         </form>
 
-        <button class="btn btn-primary btn-mic" @click="activandoMicrofono">
+        <button class="btn btn-primary btn-mic" v-if="mostrarMic" @click="activandoMicrofono">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" /><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" /></svg>
         </button>
       </div>
@@ -33,13 +33,15 @@
 import piePagina from "../components/piePagina.vue";
 import card from "../components/card.vue";
 import navbar from "../components/navbar.vue";
-import { ref, watchEffect } from "vue";
+import { ref, watchEffect, onMounted } from "vue";
 import Swal from "sweetalert2"; // alert
 
 const pokemones = ref({});
 const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 const buscarConInput = ref("");
 const stats = ref([]);
+const microfono = ref("");
+const mostrarMic = ref(true);
 
 //la solucion para que la pagina tarde en cargar
 await new Promise((res) => setTimeout(res, 1000));
@@ -74,8 +76,6 @@ const buscarPokemon = () => {
     pokemones.value = [];
   }
 };
-
-const microfono = ref("");
 
 const activandoMicrofono = async () => {
   try {
@@ -118,6 +118,13 @@ watchEffect(() => {
   // para vigilar lo reactivo y usar el localstorage hay que usar watcheffect
   localStorage.setItem("pokemon", JSON.stringify(pokemones.value)); // primero lo creo y lo guardo como string
   localStorage.setItem("stats_pokemon", JSON.stringify(stats.value));
+});
+
+onMounted(() => {
+  //por si el microfono no es compatible con el navegador
+  if (!("webkitSpeechRecognition" in window)) {
+    mostrarMic.value = false;
+  }
 });
 </script>
 

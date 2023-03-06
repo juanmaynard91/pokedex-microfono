@@ -23,10 +23,18 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 #app {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
-  height: 100vh;
   background-image: url(./background-pokedex.jpg);
   background-repeat: no-repeat;
   background-size: cover; /* sirve para que la imagen cubra todo el contenedor (se adapte a la resolucion y no se ve distorcionado )*/
+  //para que ocupe toda la el espacio y no poner un valor fijo que no se adapte a todas las pantallas
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //para que cuando rote la pantalla del celular no tenga que andar poniendo una altura fija para cada pantalla
+  height: 100%;
+  overflow: auto;
 }
 
 /* colores type pokemon*/
@@ -91,11 +99,10 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 }
 
 main {
-  max-width: 100%; /* el % es relativo se adapta al tamaño de la pantalla, y max-width tambien sirve para que se adapte al tamoño de pantalla */
-  height: 100%; /* para ocupar todo el alto automaticamente y no este adivinando con rem para cada tamaño de pantalla*/
-  margin: 0 auto;
-  padding-top: 1%;
-  box-sizing: border-box; /* fijo el tamaño de caja del contenedor no importa las medidas que le agregue a los demas elementos */
+  //max-width: 100%; /* el % es relativo se adapta al tamaño de la pantalla, y max-width tambien sirve para que se adapte al tamoño de pantalla */
+  //height: 100%; /* para ocupar todo el alto automaticamente y no este adivinando con rem para cada tamaño de pantalla*/
+  margin: 2.5rem 0 0.5rem 0;
+  //box-sizing: border-box; /* fijo el tamaño de caja del contenedor no importa las medidas que le agregue a los demas elementos */
 }
 
 /* card */
@@ -121,7 +128,7 @@ img {
 // medidas para celular normales
 @media screen and (min-width: 480px) and (max-width: 767px) {
   img {
-    height: 6rem;
+    height: 10rem;
     transform: $tamaño-imagen;
   }
 }
@@ -133,9 +140,6 @@ img {
   }
   .centrar {
     margin: $acomodando-card-rotacion-pantalla;
-  }
-  #app {
-    height: 150vh;
   }
 }
 // medidas para laptop
@@ -190,6 +194,10 @@ form {
 /* navbar */
 .navbar {
   @include centrarTodo();
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 .centrar-navbar {
   @include centrarTodo();
@@ -308,7 +316,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 413px) {
   footer .social-media {
     height: 4rem;
 

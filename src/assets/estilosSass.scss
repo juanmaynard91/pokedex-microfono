@@ -99,10 +99,7 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 }
 
 main {
-  //max-width: 100%; /* el % es relativo se adapta al tamaño de la pantalla, y max-width tambien sirve para que se adapte al tamoño de pantalla */
-  //height: 100%; /* para ocupar todo el alto automaticamente y no este adivinando con rem para cada tamaño de pantalla*/
-  margin: 2.5rem 0 0.5rem 0;
-  //box-sizing: border-box; /* fijo el tamaño de caja del contenedor no importa las medidas que le agregue a los demas elementos */
+  margin-top: 4rem;
 }
 
 /* card */
@@ -130,6 +127,9 @@ img {
   img {
     height: 10rem;
     transform: $tamaño-imagen;
+  }
+  main {
+    height: 40rem;
   }
 }
 // medidas para tablet

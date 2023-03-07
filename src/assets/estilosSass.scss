@@ -1,3 +1,5 @@
+//para que los estilos sean compatible con todos los navegadores apretar F1, Autoprefixer Run y genera todo automaticamente
+
 $tamaño-imagen: scale(1.5);
 $acomodando-card-rotacion-pantalla: 1rem auto 6rem auto !important;
 $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
@@ -101,13 +103,16 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 
 main {
   margin-top: 4rem;
-  z-index: 0 //para que no este por encima del navbar y del footer
+  z-index: 0; //para que no este por encima del navbar y del footer
 }
 
 /* card */
 img {
   height: 14rem;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
+  -o-object-fit: contain;
   object-fit: contain;
   transform: $tamaño-imagen;
   padding: 0 1rem 0 1rem;
@@ -169,6 +174,7 @@ img {
 
   .card {
     border-radius: 20px;
+    -webkit-filter: drop-shadow(0 0 15px #121212);
     filter: drop-shadow(0 0 15px #121212);
   }
 }

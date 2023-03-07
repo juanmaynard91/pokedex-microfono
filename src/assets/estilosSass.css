@@ -15,6 +15,7 @@
   font-family: "Ubuntu", sans-serif;
   background-image: url(./background-pokedex.jpg);
   background-repeat: no-repeat;
+  background-position: center center; /* centro el background */
   background-size: cover; /* sirve para que la imagen cubra todo el contenedor (se adapte a la resolucion y no se ve distorcionado )*/
   position: absolute;
   top: 0;
@@ -105,6 +106,7 @@
 
 main {
   margin-top: 4rem;
+  z-index: 0;
 }
 
 /* card */
@@ -203,7 +205,7 @@ form {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .centrar-navbar {

@@ -25,6 +25,7 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
   font-family: "Ubuntu", sans-serif;
   background-image: url(./background-pokedex.jpg);
   background-repeat: no-repeat;
+  background-position: center center; /* centro el background */
   background-size: cover; /* sirve para que la imagen cubra todo el contenedor (se adapte a la resolucion y no se ve distorcionado )*/
   //para que ocupe toda la el espacio y no poner un valor fijo que no se adapte a todas las pantallas
   position: absolute;
@@ -100,6 +101,7 @@ $acomodando-card-pantalla-vertical: 1rem auto 3rem auto !important;
 
 main {
   margin-top: 4rem;
+  z-index: 0 //para que no este por encima del navbar y del footer
 }
 
 /* card */
@@ -197,7 +199,7 @@ form {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 .centrar-navbar {
   @include centrarTodo();

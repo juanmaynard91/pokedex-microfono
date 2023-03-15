@@ -7,12 +7,6 @@ export default defineConfig({
   plugins: [vue(),
   compression({
     ext: '.br, .js, .css, .html, .svg', // Utiliza el algoritmo de compresión Brotli
-    filter: (req, res) => {
-      if (req.headers['accept-encoding']) {
-        return /text|application|image/i.test(req.headers['accept-encoding']);
-      }
-      return false;
-    },
     threshold: 10240,
     gzip: {
       flush: require('zlib').constants.Z_SYNC_FLUSH

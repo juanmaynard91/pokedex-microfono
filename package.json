@@ -14,7 +14,8 @@
     "boxicons": "^2.1.4",
     "compression": "^1.7.4",
     "sweetalert2": "^11.7.2",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-lazyload": "^3.0.0-rc.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.4",

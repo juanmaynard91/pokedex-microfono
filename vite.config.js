@@ -7,7 +7,7 @@ import compression from 'vite-plugin-compression';
 export default defineConfig({
   plugins: [vue(),
   compression({
-    ext: '.br', // Utiliza el algoritmo de compresión Brotli
+    ext: '.br, .js, .css, .html, .svg', // Utiliza el algoritmo de compresión Brotli
   }),],
   base: "/pokedex-microfono/"
 })

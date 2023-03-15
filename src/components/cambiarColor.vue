@@ -27,10 +27,6 @@
   $color-letra-blanco: #fff;
   
   body {
-    /*background: #0575e6;*/
-    /*background-size: 200% 200%;*/
-    /*background-image: linear-gradient(to right, #00c6ff, #0072ff);
-    animation: bg-animado 5s linear infinite alternate;*/
     .card {
       background: #e0e0e0;
     }
@@ -57,10 +53,7 @@
   }
   
   .dark {
-    /*background-color: #03001e !important;*/
-    //background-image: linear-gradient(to right, #1e3c72, #2a5298) !important;
     .card {
-      //background: #757f9a;
       background: #202020;
       p, span, .color-letra {
         color: $color-letra-blanco;
@@ -86,15 +79,6 @@
       color : $color-letra-blanco;
     }
   }
-  
-  /*@keyframes bg-animado {
-    from {
-      background-position: 0, 0;
-    }
-    to {
-      background-position: 100% 100%;
-    }
-  }*/
   
   button {
     --button_radius: 0.75em;

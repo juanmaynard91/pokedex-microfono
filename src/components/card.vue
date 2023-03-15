@@ -4,7 +4,7 @@
     <div class="card fw-bold border_black ancho-card">
       <div class="row g-0">
         <div class="col-md-4 centrar-imagen">
-          <img class="img-fluid rounded-start" :src="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
+          <img class="img-fluid rounded-start" v-lazy="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
 
         </div>
         <div class="col-md-8">
@@ -19,13 +19,6 @@
                 <span :class="type.type.name"> {{ type.type.name }}</span>
               </div>
             </div>
-
-            <!--<div class="color-letra centrar-habilidades">
-              abilities 
-              <div v-for="(ability, index) in pokemones.abilities" :key="index">
-                <span>{{ ability.ability.name }}</span>
-              </div>
-            </div>-->
 
             <barras :stats="stats" />
           </div>
@@ -57,25 +50,6 @@ const props = defineProps({
   stats: { type: Array, required: true },
 });
 
-//mostrar info del pokemon
-// muestra un nuevo array por eso le agrega las "", hacer un v-for en template con li
-/*const ataques = computed(() => {
-   if (pokemones.value) {
-     return pokemones.value.abilities.map((ataques) => ataques.ability.name);
-   }
- });
- 
- const tipo = computed(() => {
-   if (pokemones.value) {
-     return pokemones.value.types.map((tipo) => tipo.type.name);
-   }
- });
- 
- const estadisticas = computed(() => {
-   if (pokemones.value) {
-     return pokemones.value.stats.map((estadisticas) => estadisticas.base_stat);
-   }
- });*/
 </script>
 
 <style scoped lang="scss">

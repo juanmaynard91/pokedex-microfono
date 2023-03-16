@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <img class="altura-logo" src="../assets/pokedex-logo.webp" alt="logo de pokedex" loading="lazy" />
+      <img class="altura-logo" src="../assets/pokedex-logo.webp" alt="logo de pokedex" loading="lazy" height="50" width="135" />
 
       <label for="burger" class="burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <input id="burger" type="checkbox" />
@@ -33,9 +33,9 @@ import cambiarTema from "./cambiarColor.vue";
 .navbar-brand {
   margin: 0;
 }
-.altura-logo {
+/*.altura-logo {
   height: 2rem;
-}
+}*/
 .nav-item {
   display: flex;
   justify-content: flex-end;

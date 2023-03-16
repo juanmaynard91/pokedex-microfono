@@ -107,7 +107,7 @@ main {
 }
 
 /* card */
-img {
+.imagenPokemon {
   height: 14rem;
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -moz-crisp-edges;
@@ -124,14 +124,14 @@ img {
 
 // medidas para celular pequeños
 @media screen and (max-width: 480px) {
-  img {
+  .imagenPokemon {
     height: 5rem;
     transform: $tamaño-imagen;
   }
 }
 // medidas para celular normales
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  img {
+  .imagenPokemon {
     height: 10rem;
     transform: $tamaño-imagen;
   }
@@ -141,7 +141,7 @@ img {
 }
 // medidas para tablet
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  img {
+  .imagenPokemon {
     height: 18rem;
     transform: $tamaño-imagen;
   }
@@ -151,7 +151,7 @@ img {
 }
 // medidas para laptop
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  img {
+  .imagenPokemon {
     height: 18rem;
     transform: $tamaño-imagen;
   }
@@ -161,7 +161,7 @@ img {
 }
 // medidas para monitor pc
 @media screen and (min-width: 1200px) {
-  img {
+  .imagenPokemon {
     height: 18rem;
     transform: $tamaño-imagen;
   }
@@ -266,8 +266,6 @@ form {
 
 /* footer */
 footer {
-  //background-color: #252525;
-  //color: #fff;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -287,18 +285,12 @@ footer {
   h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    /*margin-bottom: 0.5rem;*/
   }
 
   .iconos-footer {
     padding: 0 20px;
     text-decoration: none;
-    //color: #fff;
   }
-
-  /*.iconos-footer:hover {
-    color: #d7dde8;
-  }*/
 
   .bi:hover {
     transform: $tamaño-imagen;

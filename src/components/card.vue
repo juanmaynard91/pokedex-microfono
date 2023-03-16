@@ -4,7 +4,7 @@
     <div class="card fw-bold border_black ancho-card">
       <div class="row g-0">
         <div class="col-md-4 centrar-imagen">
-          <img class="img-fluid rounded-start" v-lazy="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
+          <img class="img-fluid rounded-start imagenPokemon" v-lazy="pokemones.sprites.front_default" :alt="pokemones.name" loading="lazy" />
 
         </div>
         <div class="col-md-8">

@@ -16,6 +16,8 @@ const props = defineProps({
 </script>
 
 <style scoped>
+@import "../assets/estilosSass.css";
+
 .progress {
   border: 1px solid black;
   width: 50%;
@@ -31,9 +33,5 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.primer-letra::first-letter {
-  text-transform: uppercase;
 }
 </style>

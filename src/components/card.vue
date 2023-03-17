@@ -11,10 +11,10 @@
           <div class="card-body d-grid gap-1 padding-card">
             <p>#{{ pokemones.id }}</p>
 
-            <p>{{ pokemones.name }}</p>
+            <p class="primer-letra">{{ pokemones.name }}</p>
 
             <div class="d-flex justify-content-evenly align-items-center color-letra altura-type">
-              <div class="badge" v-for="(type, index) in pokemones.types" :key="index">
+              <div class="badge primer-letra" v-for="(type, index) in pokemones.types" :key="index">
                 <!-- :class si el nombre en css coinside con type.name muestro el color -->
                 <span :class="type.type.name"> {{ type.type.name }}</span>
               </div>
@@ -71,9 +71,5 @@ const props = defineProps({
 }
 .altura-type {
   height: 2rem;
-}
-
-p::first-letter {
-  text-transform: uppercase;
 }
 </style>

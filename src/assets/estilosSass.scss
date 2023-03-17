@@ -121,6 +121,9 @@ main {
 .padding-card {
   padding: 1rem;
 }
+.primer-letra::first-letter {
+  text-transform: uppercase;
+}
 
 // medidas para celular pequeños
 @media screen and (max-width: 480px) {

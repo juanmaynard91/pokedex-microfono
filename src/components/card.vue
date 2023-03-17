@@ -72,4 +72,8 @@ const props = defineProps({
 .altura-type {
   height: 2rem;
 }
+
+p::first-letter {
+  text-transform: uppercase;
+}
 </style>

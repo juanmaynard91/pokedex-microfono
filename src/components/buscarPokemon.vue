@@ -8,7 +8,7 @@
       <div class="centrar-buscadores">
         <form @submit.prevent="buscarPokemon">
           <div class="input-group mt-3 mb-3">
-            <input type="text" class="form-control input border_black" placeholder="ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
+            <input type="text" class="form-control input border_black" placeholder="Ingrese el nombre del pokemon.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="buscarConInput" />
           </div>
         </form>
 
@@ -59,7 +59,7 @@ const cargarPokemonesInput = async () => {
   } catch (e) {
     Swal.fire({
       title: "Error!",
-      text: "escribi bien el nombre pa",
+      text: "Escribi bien el nombre pa",
       icon: "error",
     });
     console.log(e);

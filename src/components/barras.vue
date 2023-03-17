@@ -1,6 +1,6 @@
 <template>
   <div class="acomodar-progress" v-for="stat in stats" :key="stat.name">
-    <div class="color-letra">{{ stat.name }}</div>
+    <div class="color-letra primer-letra">{{ stat.name }}</div>
     <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
       <div class="progress-bar progress-bar-striped" :style="{ width: `${stat.value}%` }">
         {{ stat.value }}
@@ -31,5 +31,9 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.primer-letra::first-letter {
+  text-transform: uppercase;
 }
 </style>

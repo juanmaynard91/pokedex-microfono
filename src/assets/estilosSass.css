@@ -304,9 +304,6 @@ footer .iconos-footer {
   padding: 0 20px;
   text-decoration: none;
 }
-footer .bi:hover {
-  transform: scale(1.5);
-}
 footer .contact-info {
   display: grid;
 }

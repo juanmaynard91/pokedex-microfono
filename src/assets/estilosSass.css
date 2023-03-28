@@ -186,8 +186,7 @@ p {
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 form {
@@ -276,10 +275,6 @@ form {
   width: 3rem;
 }
 
-.btn-mic:hover {
-  transform: scale(1.1);
-}
-
 /* footer */
 footer {
   position: fixed;
@@ -330,4 +325,4 @@ footer .contact-info {
   footer .social-media .iconos-footer {
     transform: scale(1.5);
   }
-} /*# sourceMappingURL=estilosSass.css.map */
+}/*# sourceMappingURL=estilosSass.css.map */

@@ -1,8 +1,8 @@
 <template>
   <div class="acomodar-progress" v-for="stat in stats" :key="stat.name">
     <div class="color-letra primer-letra">{{ stat.name }}</div>
-    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped" :style="{ width: `${stat.value}%` }">
+    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" :style="{ width: `${stat.value}%` }">
         {{ stat.value }}
       </div>
     </div>

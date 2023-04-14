@@ -4,8 +4,8 @@
       <div class="social-media">
         <h3>¡Visita estos links!</h3>
         <div class="iconos-footer">
-          <a href="https://www.linkedin.com/in/juan-maynard/" aria-label="mi link de linkedin" target="_blank" class="iconos-footer"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/juanmaynard91" aria-label="mi link de github" target="_blank" class="iconos-footer"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/juan-maynard/" aria-label="mi link de linkedin" target="_blank" toggle="tooltip" title="Linkedin" class="iconos-footer"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/juanmaynard91" aria-label="mi link de github" target="_blank" toggle="tooltip" title="Github" class="iconos-footer"><i class="bi bi-github"></i></a>
         </div>
       </div>
       <div class="contact-info">

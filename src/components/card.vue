@@ -9,11 +9,9 @@
         </div>
         <div class="col-md-8">
           <div class="card-body d-grid gap-1 padding-card">
-            <p>#{{ pokemones.id }}</p>
-
-            <p class="primer-letra">{{ pokemones.name }}</p>
-
-            <div class="d-flex justify-content-evenly align-items-center color-letra altura-type">
+            <p class="primer-letra h1">{{ pokemones.name }}</p>
+            <p class="h4">#{{ pokemones.id }}</p>
+            <div class="d-flex justify-content-evenly align-items-center color-letra altura-type h4">
               <div class="badge primer-letra" v-for="(type, index) in pokemones.types" :key="index">
                 <!-- :class si el nombre en css coinside con type.name muestro el color -->
                 <span :class="type.type.name"> {{ type.type.name }}</span>
@@ -56,8 +54,8 @@ const props = defineProps({
 @import "../assets/estilosSass.css";
 
 @mixin centrarTodo {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
@@ -65,9 +63,9 @@ const props = defineProps({
   @include centrarTodo;
 }
 .centrar-habilidades {
+  align-items: center;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 .altura-type {
   height: 2rem;

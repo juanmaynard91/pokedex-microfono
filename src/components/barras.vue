@@ -20,18 +20,19 @@ const props = defineProps({
 
 .progress {
   border: 1px solid black;
+  height: 1.2rem;
   width: 50%;
 }
 
 .progress-bar {
-  display: flex;
   align-items: end;
+  display: flex;
   padding: 0 2px 0 0;
 }
 
 .acomodar-progress {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 </style>

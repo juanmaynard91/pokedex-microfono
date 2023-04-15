@@ -81,24 +81,24 @@
   }
   
   button {
-    --button_radius: 0.75em;
     --button_color: #0575e6;
     --button_outline_color: #000000;
+    --button_radius: 0.75em;
+    background: var(--button_outline_color);
+    border-radius: var(--button_radius);
+    border: none;
     font-size: 12px;
     font-weight: bold;
-    border: none;
-    border-radius: var(--button_radius);
-    background: var(--button_outline_color);
   }
   
   .button_top {
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid var(--button_outline_color);
-    border-radius: var(--button_radius);
-    padding: 0.75em 1.5em;
     background: var(--button_color);
+    border-radius: var(--button_radius);
+    border: 2px solid var(--button_outline_color);
+    box-sizing: border-box;
     color: #fff;
+    display: block;
+    padding: 0.75em 1.5em;
     transform: translateY(-0.2em);
     transition: transform 0.1s ease;
   }

@@ -138,6 +138,7 @@ main {
   .imagenPokemon {
     height: 10rem;
     transform: $tamaño-imagen;
+    image-rendering: auto;
   }
   main {
     height: 40rem;
@@ -165,9 +166,22 @@ main {
 }
 // medidas para monitor pc
 @media screen and (min-width: 1200px) {
-  .imagenPokemon {
-    height: 18rem;
-    transform: $tamaño-imagen;
+  .ancho-card {
+    margin: 5rem auto;
+  }
+  .card {
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+    width: 70vh;
+    .imagenPokemon {
+      height: 10rem;
+      image-rendering: auto;
+      transform: $tamaño-imagen;
+    }
+    .acomodar-progress {
+      height: 2rem;
+    }
   }
 }
 
@@ -216,14 +230,17 @@ form {
 }
 
 /* animacion trasnition para el card */
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-.list-enter-from,
-.list-leave-to {
+.list-leave-to,
+.list-enter-from {
   opacity: 0;
-  transform: translateX(-50px);
+}
+.list-leave-from,
+.list-enter-to {
+  opacity: 1;
+}
+.list-leave-active,
+.list-enter-active {
+  transition: opacity 0.5s;
 }
 
 /* input */

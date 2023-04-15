@@ -29,34 +29,33 @@
 @import "../assets/estilosSass.css";
 
 @mixin centrarTodo {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 .container {
+  height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
 .centrar-loader {
   @include centrarTodo;
-
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .wheel-and-hamster {
   --dur: 1s;
+  font-size: 14px;
+  height: 12em;
   position: relative;
   width: 12em;
-  height: 12em;
-  font-size: 14px;
 }
 
 .wheel,
@@ -69,10 +68,10 @@
 .wheel,
 .spoke {
   border-radius: 50%;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .wheel {
@@ -86,12 +85,12 @@
 
 .hamster {
   animation: hamster var(--dur) ease-in-out infinite;
-  top: 50%;
-  left: calc(50% - 3.5em);
-  width: 7em;
   height: 3.75em;
-  transform: rotate(4deg) translate(-0.8em, 1.85em);
+  left: calc(50% - 3.5em);
+  top: 50%;
   transform-origin: 50% 0;
+  transform: rotate(4deg) translate(-0.8em, 1.85em);
+  width: 7em;
   z-index: 1;
 }
 
@@ -101,11 +100,11 @@
   border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
   box-shadow: 0 -0.25em 0 hsl(30, 90%, 80%) inset,
     0.75em -1.55em 0 hsl(30, 90%, 90%) inset;
-  top: 0;
-  left: -2em;
-  width: 2.75em;
   height: 2.5em;
+  left: -2em;
+  top: 0;
   transform-origin: 100% 50%;
+  width: 2.75em;
 }
 
 .hamster__ear {
@@ -113,30 +112,30 @@
   background: hsl(0, 90%, 85%);
   border-radius: 50%;
   box-shadow: -0.25em 0 hsl(30, 90%, 55%) inset;
-  top: -0.25em;
-  right: -0.25em;
-  width: 0.75em;
   height: 0.75em;
+  right: -0.25em;
+  top: -0.25em;
   transform-origin: 50% 75%;
+  width: 0.75em;
 }
 
 .hamster__eye {
   animation: hamsterEye var(--dur) linear infinite;
   background-color: hsl(0, 0%, 0%);
   border-radius: 50%;
-  top: 0.375em;
-  left: 1.25em;
-  width: 0.5em;
   height: 0.5em;
+  left: 1.25em;
+  top: 0.375em;
+  width: 0.5em;
 }
 
 .hamster__nose {
   background: hsl(0, 90%, 75%);
   border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
-  top: 0.75em;
-  left: 0;
-  width: 0.2em;
   height: 0.25em;
+  left: 0;
+  top: 0.75em;
+  width: 0.2em;
 }
 
 .hamster__body {
@@ -145,22 +144,22 @@
   border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
   box-shadow: 0.1em 0.75em 0 hsl(30, 90%, 55%) inset,
     0.15em -0.5em 0 hsl(30, 90%, 80%) inset;
-  top: 0.25em;
-  left: 2em;
-  width: 4.5em;
   height: 3em;
+  left: 2em;
+  top: 0.25em;
   transform-origin: 17% 50%;
   transform-style: preserve-3d;
+  width: 4.5em;
 }
 
 .hamster__limb--fr,
 .hamster__limb--fl {
   clip-path: polygon(0 0, 100% 0, 70% 80%, 60% 100%, 0% 100%, 40% 80%);
-  top: 2em;
-  left: 0.5em;
-  width: 1em;
   height: 1.5em;
+  left: 0.5em;
+  top: 2em;
   transform-origin: 50% 0;
+  width: 1em;
 }
 
 .hamster__limb--fr {
@@ -188,11 +187,11 @@
     40% 90%,
     0% 30%
   );
-  top: 1em;
-  left: 2.8em;
-  width: 1.5em;
   height: 2.5em;
+  left: 2.8em;
+  top: 1em;
   transform-origin: 50% 30%;
+  width: 1.5em;
 }
 
 .hamster__limb--br {
@@ -212,12 +211,12 @@
   background: hsl(0, 90%, 85%);
   border-radius: 0.25em 50% 50% 0.25em;
   box-shadow: 0 -0.2em 0 hsl(0, 90%, 75%) inset;
-  top: 1.5em;
-  right: -0.5em;
-  width: 1em;
   height: 0.5em;
-  transform: rotate(30deg) translateZ(-1px);
+  right: -0.5em;
+  top: 1.5em;
   transform-origin: 0.25em 0.25em;
+  transform: rotate(30deg) translateZ(-1px);
+  width: 1em;
 }
 
 .spoke {

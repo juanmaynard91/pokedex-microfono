@@ -138,6 +138,7 @@ main {
   .imagenPokemon {
     height: 10rem;
     transform: scale(1.5);
+    image-rendering: auto;
   }
   main {
     height: 40rem;
@@ -162,9 +163,22 @@ main {
   }
 }
 @media screen and (min-width: 1200px) {
-  .imagenPokemon {
-    height: 18rem;
+  .ancho-card {
+    margin: 5rem auto;
+  }
+  .card {
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+    width: 70vh;
+  }
+  .card .imagenPokemon {
+    height: 10rem;
+    image-rendering: auto;
     transform: scale(1.5);
+  }
+  .card .acomodar-progress {
+    height: 2rem;
   }
 }
 /* centrar el card y otras cosas */
@@ -220,15 +234,19 @@ form {
 }
 
 /* animacion trasnition para el card */
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
+.list-leave-to,
+.list-enter-from {
+  opacity: 0;
 }
 
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(-50px);
+.list-leave-from,
+.list-enter-to {
+  opacity: 1;
+}
+
+.list-leave-active,
+.list-enter-active {
+  transition: opacity 0.5s;
 }
 
 /* input */

@@ -52,26 +52,26 @@ import cambiarTema from "./cambiarColor.vue";
 }
 
 .burger {
-  position: relative;
-  width: 40px;
-  height: 30px;
   background: transparent;
   cursor: pointer;
+  height: 30px;
+  position: relative;
+  width: 40px;
 }
 .burger input {
   display: none;
 }
 .burger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
   background: black;
   border-radius: 9px;
-  opacity: 1;
+  display: block;
+  height: 4px;
   left: 0;
+  opacity: 1;
+  position: absolute;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
+  width: 100%;
 }
 .burger span:nth-of-type(1) {
   top: 0px;
@@ -79,8 +79,8 @@ import cambiarTema from "./cambiarColor.vue";
 }
 .burger span:nth-of-type(2) {
   top: 50%;
-  transform: translateY(-50%);
   transform-origin: left center;
+  transform: translateY(-50%);
 }
 .burger span:nth-of-type(3) {
   top: 100%;
@@ -88,17 +88,17 @@ import cambiarTema from "./cambiarColor.vue";
   transform: translateY(-100%);
 }
 .burger input:checked ~ span:nth-of-type(1) {
-  transform: rotate(45deg);
-  top: 0px;
   left: 5px;
+  top: 0px;
+  transform: rotate(45deg);
 }
 .burger input:checked ~ span:nth-of-type(2) {
-  width: 0%;
   opacity: 0;
+  width: 0%;
 }
 .burger input:checked ~ span:nth-of-type(3) {
-  transform: rotate(-45deg);
-  top: 28px;
   left: 5px;
+  top: 28px;
+  transform: rotate(-45deg);
 }
 </style>
